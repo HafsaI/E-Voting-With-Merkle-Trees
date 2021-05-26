@@ -17,17 +17,15 @@ The Libraries used are:-
     wtforms
 
 # registeration.py
-This file focuses on the registeration procedure of the voter. It takes as input a list of all data that is collected from the form and the collected data is then stores in voters_data.csv. Here the candidates voter ID is created and shown to them on the form so that they can save it with themselves for whenever they want to vote. At the backend a Public and Private key of the voter is created and stored in order for encryption and decryption to take place in the other parts of the system. The method used is followed from this article:-
+This file focuses on the registeration procedure of the voter. It takes as input a list of all data that is collected from the form and the collected data is then stores in Files/voters_data.csv. Here the candidates voter ID is created and shown to them on the form so that they can save it with themselves for whenever they want to vote. At the backend a Public and Private key of the voter is created and stored in order for encryption and decryption to take place in the other parts of the system. The method used tp generate the Public and Privates keys and the encryption and decryption of vote in further files is followed from this article:-
 
     https://core.ac.uk/download/pdf/11779635.pdf
 
-# pollserv.py
-The polling process happens in this file. The voter enters the voter ID and the vote for his candidate by mentioning his candidate ID in the beginning in the command line. The voter ID is then used to verify if the voter is registered or not, by tallying it against voters.json file. If he is registered, then a unique ballot and ballot ID is generated for the voter to store the casted vote. The ballot ID along with its corresponding voter ID is stored in data/ballot.json file once the voting has been completed. After this, the vote is encrypted using the voter's private key for which data is loaded from voters.json . It is encrypted using the RSA Encryption Algorithm. The ballot ID and the encrypted vote is mapped in a data/polls.json file.
+# vote_cast.py
+This is the file where the vote is casted. The  voter's name, voter ID and the vote for their candidate is given to the function run_polls() in this file as a list. Using the voter ID the private key is retreived from the file Files/voters_data.csv. Once retreived a ballot is created for this voter and their ballot ID and voter ID is stored in Files/ballots.csv, once stored the vote of the voter is encrypted with the extracted private key using the RSA encryption method and then this encrypted vote and the ballot ID that was generated previously is stored in Files/polls.csv. 
 
-
-# storeserv.py
+# store_votes.py
 It reads data from all the files used for mapping and storing generated data. It uses the ballot.json to verify the ballot ID against the ballot ID present in polls.json file. It is also used to figure out the corresponding voter ID to any given ballot ID. Using the voter ID, we access the voter's public key to decrypt the encrypted vote. The vote comprises of a candidate ID. The sequence of candidate IDs is shown as a result. The sequence follows the same structure as the votes were stored. This sequence of candidate IDs is then hashed using SHA-256 and used as a leaf node to form a merkle tree. This tree is then dumped using pickle, in a file called Merkle.
-
 
 # countserv.py
 This file reads data from the Merkle file and counts the total votes for each candidate by using a counter for each of them while reading it from the Merkle file. The file initially reads from the pickled 'merkle' file which consists of the MerkleTools object. This object has the whole merkle tree in an immutable, binary form to read and process the leaves. The leaves of the Merkle Tree consists of the individual vote received for the candidate. The merkle tree helps in protecting the vote data from any kind of tampering and preserves the state of the voting sequence.
