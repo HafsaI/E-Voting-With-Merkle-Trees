@@ -48,7 +48,7 @@ This file is used to make the forms using Flask and wtForm libraries. In this fi
 ![4](https://user-images.githubusercontent.com/46850039/119715923-f9702d80-be7d-11eb-9431-485855e4a6df.jpg)
 
 ### Audit a Candidate
-![6](https://user-images.githubusercontent.com/46850039/119715930-fb39f100-be7d-11eb-88c4-247fb28bf40d.jpg)
+![6](https://i.ibb.co/MCMqMLF/Audit-Form.png)
 
 ### Display Voting Results
 ![5](https://user-images.githubusercontent.com/46850039/119715928-faa15a80-be7d-11eb-9c6f-60268027e3cd.JPG)
