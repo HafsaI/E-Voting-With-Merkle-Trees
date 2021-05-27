@@ -7,6 +7,14 @@ The encryption method used to ensure safety are:-
     RSA Encryption 
     Merkle Tree Hashing
   
+## How to Run
+Install the following libraries if you do not have them using pip on command prompt:-
+
+    pip install flask
+    pip install wtform
+    
+Once Installed run forms.py and interact with the GUI!
+  
 The Libraries used are:-
 
     hashlib
@@ -15,12 +23,11 @@ The Libraries used are:-
     csv
     flask 
     wtforms
-## How To Run
 
 ## registeration.py
 This file focuses on the registeration procedure of the voter. It takes as input a list of all data that is collected from the form and the collected data is then stores in Files/voters_data.csv. Here the candidates voter ID is created and shown to them on the form so that they can save it with themselves for whenever they want to vote. At the backend a Public and Private key of the voter is created and stored in order for encryption and decryption to take place in the other parts of the system. The method used tp generate the Public and Privates keys and the encryption and decryption of vote in further files is followed from this article:-
 
-    https://core.ac.uk/download/pdf/11779635.pdf
+https://core.ac.uk/download/pdf/11779635.pdf
 
 ## vote_cast.py
 This is the file where the vote is casted. The  voter's name, voter ID and the vote for their candidate is given to the function run_polls() in this file as a list. Using the voter ID the private key is retreived from Files/voters_data.csv. Once retreived a ballot is created for this voter and their ballot ID and voter ID is stored in Files/ballots.csv, once stored the vote of the voter is encrypted with the extracted private key using the RSA encryption method and then this encrypted vote and the ballot ID that was generated previously is stored in Files/polls.csv. 
@@ -54,3 +61,6 @@ This file is used to make the forms using Flask and wtForm libraries. In this fi
 ### Display Voting Results
 ![5](https://user-images.githubusercontent.com/46850039/119775210-bee9ad80-bedc-11eb-912e-ab7392cdd1fb.JPG)
 
+## Video Demonstration
+
+https://youtu.be/iacn5mAhHhw
