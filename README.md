@@ -62,5 +62,4 @@ This file is used to make the forms using Flask and wtForm libraries. In this fi
 ![5](https://user-images.githubusercontent.com/46850039/119775210-bee9ad80-bedc-11eb-912e-ab7392cdd1fb.JPG)
 
 ## Video Demonstration
-
 https://youtu.be/iacn5mAhHhw
