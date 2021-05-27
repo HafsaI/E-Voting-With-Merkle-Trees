@@ -36,7 +36,7 @@ This file is used to verify the state of the merkle tree which is pickled from t
 ## forms.py
 This file is used to make the forms using Flask and wtForm libraries. In this file forms for registeration, Login and Vote Casting, Counting all votes and then Auditing them are made. 
 ### Main Screen
-![1](https://user-images.githubusercontent.com/46850039/119715897-f6753d00-be7d-11eb-85f8-95e5020e164f.jpg)
+![1](https://user-images.githubusercontent.com/46850039/119775183-b4c7af00-bedc-11eb-8dfc-a404a3efa16a.jpg)
 
 ### Registration
 ![2](https://user-images.githubusercontent.com/46850039/119715906-f83f0080-be7d-11eb-9f59-830807e5aea6.jpg)
@@ -48,7 +48,8 @@ This file is used to make the forms using Flask and wtForm libraries. In this fi
 ![4](https://user-images.githubusercontent.com/46850039/119715923-f9702d80-be7d-11eb-9431-485855e4a6df.jpg)
 
 ### Audit a Candidate
-![6](https://user-images.githubusercontent.com/46850039/119715930-fb39f100-be7d-11eb-88c4-247fb28bf40d.jpg)
+![6](https://user-images.githubusercontent.com/46850039/119775260-cc9f3300-bedc-11eb-9eaf-f1c6479771ff.jpg)
 
 ### Display Voting Results
-![5](https://user-images.githubusercontent.com/46850039/119715928-faa15a80-be7d-11eb-9c6f-60268027e3cd.JPG)
+![5](https://user-images.githubusercontent.com/46850039/119775210-bee9ad80-bedc-11eb-912e-ab7392cdd1fb.JPG)
+
