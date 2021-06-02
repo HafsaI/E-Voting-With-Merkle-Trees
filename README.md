@@ -25,7 +25,7 @@ The Libraries used are:-
     wtforms
 
 ## registeration.py
-This file focuses on the registeration procedure of the voter. It takes as input a list of all data that is collected from the form and the collected data is then stores in Files/voters_data.csv. Here the candidates voter ID is created and shown to them on the form so that they can save it with themselves for whenever they want to vote. At the backend a Public and Private key of the voter is created and stored in order for encryption and decryption to take place in the other parts of the system. The method used tp generate the Public and Privates keys and the encryption and decryption of vote in further files is followed from this article:-
+This file focuses on the registeration procedure of the voter. It takes as input a list of all data that is collected from the form and the collected data is then stores in Files/voters_data.csv. Here the candidates voter ID is created and shown to them on the form so that they can save it with themselves for whenever they want to vote. At the backend a Public and Private key of the voter is created and stored in order for encryption and decryption to take place in the other parts of the system. The method used to generate the Public and Privates keys and the encryption and decryption of vote in further files is followed from this article:-
 
 https://core.ac.uk/download/pdf/11779635.pdf
 
